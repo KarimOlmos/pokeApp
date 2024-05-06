@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <h2 class="mb-4">Inicio de sesión</h2>
+      <form (ngSubmit)="onLogin()">
+        <div class="mb-3">
+          <label for="usuario" class="form-label">Usuario</label>
+          <input type="text" class="form-control" id="usuario" [(ngModel)]="username" name="username" placeholder="Nombre de usuario" required>
+        </div>
+        <div class="mb-3">
+          <label for="contrasena" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="contrasena" [(ngModel)]="password" name="password" placeholder="Contraseña" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+      </form>
+      <br>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+      <div class="mt-4">
+        ¿Aún no tienes cuenta? <a href="/auth/new-account">Regístrate aquí</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+

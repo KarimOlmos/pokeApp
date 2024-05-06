@@ -1,0 +1,49 @@
+<div *ngIf="pokemon" class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h1 class="text-center">{{ pokemon.name }}</h1>
+      <div class="d-flex flex-column align-items-center mb-3">
+        <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }} Front Image" class="img-fluid rounded w-50">
+        <p class="mt-2">Front Sprite</p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <img [src]="pokemon.sprites.back_default" alt="{{ pokemon.name }} Back Image" class="img-fluid rounded w-50">
+        <p class="mt-2">Back Sprite</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2 class="text-center">Details</h2>
+      <ul class="list-group">
+        <li class="list-group-item">ID: {{ pokemon.id }}</li>
+        <li class="list-group-item">Height: {{ pokemon.height }}</li>
+        <li class="list-group-item">Weight: {{ pokemon.weight }}</li>
+        <li class="list-group-item">Base Experience: {{ pokemon.base_experience }}</li>
+        <li class="list-group-item">Abilities:
+          <ul class="list-group mt-2">
+            <li class="list-group-item" *ngFor="let ability of pokemon.abilities">{{ ability.ability.name }}</li>
+          </ul>
+        </li>
+        <li class="list-group-item">Types:
+          <ul class="list-group mt-2">
+            <li class="list-group-item" *ngFor="let type of pokemon.types">{{ type.type.name }}</li>
+          </ul>
+        </li>
+        <li class="list-group-item">Stats:
+          <ul class="list-group mt-2">
+            <li class="list-group-item" *ngFor="let stat of pokemon.stats">
+              {{ stat.base_stat }}
+            </li>
+          </ul>
+        </li>
+
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
