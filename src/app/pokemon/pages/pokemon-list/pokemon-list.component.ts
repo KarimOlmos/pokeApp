@@ -12,6 +12,10 @@ export class PokemonListComponent implements OnInit {
 
   pokemonList: Pokemon[] = [];
 
+  title = 'pokeapp';
+  searchTerm: string = '';
+
+
   constructor(private pokemonApiService: PokemonApiService, private router: Router) { } // Inyecta Router
 
   ngOnInit(): void {
@@ -39,6 +43,12 @@ export class PokemonListComponent implements OnInit {
   viewDetails(id: number): void {
     this.router.navigate(['/pokemon', id]);
   }
+
+  onSearchChanged(searchTerm: string): void {
+    this.searchTerm = searchTerm;
+  }
+
+
 }
 
 

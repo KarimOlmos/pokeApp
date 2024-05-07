@@ -12,7 +12,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'pokemon/:id', component: PokemonDetailComponent },
-
   {
     path: '**',
     redirectTo: '4O4',

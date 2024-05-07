@@ -13,7 +13,7 @@ export class PokemonApiService {
   constructor(private http: HttpClient) { }
 
   getPokemonList(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}?limit=386`); // Limitar el número de resultados para evitar demasiados datos.
+    return this.http.get<any>(`${this.apiUrl}?limit=1025`); // Limitar el número de resultados para evitar demasiados datos.
   }
 
   getPokemonByUrl(url: string): Observable<Pokemon> {
