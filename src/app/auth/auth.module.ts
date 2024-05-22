@@ -8,6 +8,7 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { FormsModule } from '@angular/forms';
+import { ForgottenPasswordComponent } from './pages/forgotten-password/forgotten-password.component';
 
 
 
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     LayoutPageComponent,
     LoginPageComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    ForgottenPasswordComponent
   ],
   imports: [
     CommonModule,

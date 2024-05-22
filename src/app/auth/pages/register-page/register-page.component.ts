@@ -10,11 +10,12 @@ import { Router } from '@angular/router';
 export class RegisterPageComponent {
   username: string = '';
   contrasena: string = '';
+  email: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  onRegister(username: string, contrasena: string): void {
-    this.authService.register(username, contrasena);
+  onRegister(username: string, contrasena: string, email:string): void {
+    this.authService.register(username, contrasena, email);
     this.router.navigate(['/auth/login']);
   }
 

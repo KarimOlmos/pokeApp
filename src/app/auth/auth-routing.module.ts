@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { ForgottenPasswordComponent } from './pages/forgotten-password/forgotten-password.component';
 
 const routes: Routes = [
   {
@@ -11,7 +12,9 @@ const routes: Routes = [
     children: [
       { path: 'login', component: LoginPageComponent },
       { path: 'new-account', component: RegisterPageComponent },
+      { path: 'forgotten-password', component:ForgottenPasswordComponent },
       { path: '**', redirectTo: 'login' },
+
     ]
   }
 ];

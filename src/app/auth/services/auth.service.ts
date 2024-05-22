@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  private users: { username: string; password: string }[] = [
-    { username: 'usuario', password: '12345' },
+  private users: { username: string; password: string, email:string }[] = [
+    { username: 'usuario', password: '12345', email: 'usuario@user.com'},
   ];
 
   constructor() { }
@@ -21,9 +21,15 @@ export class AuthService {
   }
 
 
-  register(username: string, password: string): void {
+  register(username: string, password: string, email:string): void {
 
-    this.users.push({ username, password });
+    this.users.push({ username, password, email });
   }
+
+  recoverPassword(email: string): { username: string; password: string } | null {
+    const user = this.users.find(u => u.email === email);
+    return user ? { username: user.username, password: user.password } : null;
+  }
+
 
 }

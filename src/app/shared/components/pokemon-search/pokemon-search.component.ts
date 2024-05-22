@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { PokemonApiService } from '../../../pokemon/services/pokemon.service';// Reemplaza '...' con la ruta correcta al servicio
-import { Pokemon } from '../../../pokemon/interfaces/pokemon.interface';// Reemplaza '...' con la ruta correcta a la interfaz de Pokemon
+import { PokemonApiService } from '../../../pokemon/services/pokemon.service';
+import { Pokemon } from '../../../pokemon/interfaces/pokemon.interface';
 
 @Component({
   selector: 'pokemon-search',

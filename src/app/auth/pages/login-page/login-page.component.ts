@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class LoginPageComponent {
   username: string = '';
   password: string = '';
+  email: string = '';
 
   errorMessage: string = '';
 
